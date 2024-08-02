@@ -2233,6 +2233,7 @@ void DisplayServerX11::window_set_position(const Point2i &p_position, WindowID p
 				XFree(data);
 			}
 		}
+		XMoveWindow(x11_display, wd.x11_window, p_position.x, p_position.y);
 	}
 	XMoveWindow(x11_display, wd.x11_window, p_position.x - x, p_position.y - y);
 	_update_real_mouse_position(wd);
